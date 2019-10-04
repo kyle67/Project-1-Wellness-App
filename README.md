@@ -8,7 +8,8 @@ Data will be made persitent by using Firebase to build the app. All developers w
 
 Front End Design-J.D. Chumley
 Back End Design-Kyle Daniels
-Style
+Web Design
+
 
 
 
