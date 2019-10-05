@@ -6,7 +6,7 @@ An API will be implemented to provide users with videos and articles related to 
 Data will be made persitent by using Firebase to build the app. All developers will explain the agile software development.
 
 
-Front End Design-J.D. Chumley
+Front End Design html-J.D. Chumley
 Back End Design-Kyle Daniels
 Web Design
 
