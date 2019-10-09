@@ -10,8 +10,7 @@ html {
     background-size: cover;
 }
 
-.workouts {
-	float: left;
+
 }
 #workout-form {
 	background: red;
@@ -25,9 +24,6 @@ html {
 }
 
 \workouts {
-    text-align: center;
-    
- 
-    
+    margin: 10px;
 }
 
