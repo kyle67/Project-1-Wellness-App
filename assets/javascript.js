@@ -1,4 +1,4 @@
-var topics = ["Circuits", "Weights", "Bodyweight", "Cardio"]
+var topics = ["Workouts", "Nutrition", "Health"]
 
 function displayTopicInfo() {
 	var workouts = $(this).attr("data-name");
@@ -74,19 +74,4 @@ $(document).on("click", flipAnimate);
 
 
 
-function flipAnimate() {
-	var item = $(this).attr("id");
-	item = "#"+item;
-	// console.log(item);
-	var state = $(item).attr("data-state");
-	// console.log(state);
-	if (state === "still") {
-        $(item).attr("src", $(item).attr("data-animate"));
-        $(item).attr("data-state", "animate");
-        // console.log(this);
-      } else {
-        $(item).attr("src", $(item).attr("data-still"));
-        $(item).attr("data-state", "still");
-        // console.log(this);
-      };
 };
