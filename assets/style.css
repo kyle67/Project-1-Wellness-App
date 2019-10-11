@@ -73,3 +73,8 @@ p {
     color: #ff0000;
 } 
 
+label, input, textarea {
+    display: block;
+
+}
+
