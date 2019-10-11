@@ -1,8 +1,8 @@
-var topics = ["Circuits", "Weights", "Bodyweight", "Cardio"]
+var topics = ["Workouts", "Nutrition", "Health"]
 
 function displayTopicInfo() {
 	var workouts = $(this).attr("data-name");
-	var queryURL =  // API goes here (I think)
+	var queryURL =  "https://gabamnml-health-v1.p.rapidapi.com/bmi?weight=60&height=1.70" 
 
 	$.ajax({
 		url: queryURL, 
@@ -70,23 +70,21 @@ renderButtons();
 
 
 // Add a listener for all elements with class of "gif"
-$(document).on("click", flipAnimate);
+$(document).on("click", 
+
+fetch("https://gabamnml-health-v1.p.rapidapi.com/bmi?weight=60&height=1.70", {
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "gabamnml-health-v1.p.rapidapi.com",
+        "x-rapidapi-key": "2e4ad3828amshb40ea2bf43cf9cbp1801d4jsn8799057cfff6"
+    }
+})
+.then(response => {
+    console.log(response);
+})
+.catch(err => {
+    console.log(err);
+});
 
 
 
-function flipAnimate() {
-	var item = $(this).attr("id");
-	item = "#"+item;
-	// console.log(item);
-	var state = $(item).attr("data-state");
-	// console.log(state);
-	if (state === "still") {
-        $(item).attr("src", $(item).attr("data-animate"));
-        $(item).attr("data-state", "animate");
-        // console.log(this);
-      } else {
-        $(item).attr("src", $(item).attr("data-still"));
-        $(item).attr("data-state", "still");
-        // console.log(this);
-      };
-};
