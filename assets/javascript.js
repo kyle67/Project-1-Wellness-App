@@ -1,4 +1,4 @@
-var topics = ["Workouts", "Nutrition", "Health"]
+var topics = ["Workouts", "Nutrition", "Health", "BMI Calculator"]
 
 function displayTopicInfo() {
 	var workouts = $(this).attr("data-name");
