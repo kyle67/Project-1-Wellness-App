@@ -24,6 +24,7 @@ a {
 h1, h2, h3 {
     padding-bottom: 20px;
     margin: 10px;
+    
 }
 
 p {
@@ -58,6 +59,7 @@ p {
     float: left;
     padding-top: 20px;
     margin: 10px;
+    color: whitesmoke;
 
 }
 
@@ -89,13 +91,22 @@ p {
 label, input, textarea {
     display: block;
     margin: 10px;
-    
+          
 }
 
 button {
     margin: 15px;
     
 }
+
+.float-right {
+    width: 300px;
+    float: right;
+
+}
+
+
+
 
 
 
