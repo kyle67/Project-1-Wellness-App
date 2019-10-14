@@ -2,13 +2,14 @@ $(document).ready(function () {
 	$('.submit').click(function (event) {
 		event.preventDefault()
 		console.log('clicked button')
-
+	    
 		var email = $('.email').val()
 		var subject = $('.subject').val()
 		var message = $('.message').val()
-		var statusElm = $('.status').val()
-		statusElm.empty()
-
+		var statusElm = $('.status')
+		window.open("mailto:" +email);
+		// statusElm.empty()
+		console.log(email);
 		if (email.length > 5 && email.includes('@') && email.includes('.')) {
 			statusElm.append('<div>Email is valid</div>')
 		} else {
