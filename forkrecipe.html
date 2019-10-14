@@ -50,8 +50,7 @@
             console.log(json)
           // Creating a div to hold the recipe
 
-          var count = response.count;
-          console.log(response.count)
+        
 
           var recipeDiv = $("<div class='recipe'>");
 
@@ -62,35 +61,36 @@
           recipeDiv.append();
 
         
-         var imgURL = response.recipes[0];
+         var imgURL = json.recipes[0].image_url;
             console.log(imgURL)
-          //var source = response.;
+        
 
         
-         // var food2fork = response.?;
-
-         // var title = response.
-
-      
-          //var publisher = response.;
-
+          
+            
+                          
+         
         
-         // var publisher ="response" + _url
+         var sourceURL=json.recipes[0].source_url;
 
-         // var social rank =
+         var socialrank =json.recipes[0].social_rank;
 
-        //  var ingridents =
-
+         var title =json.recipes[0].title;
           
 
     
-         // var image = $("<img>").attr("src", imgURL);
-
-      
+         var image = $("<img>").attr("src", imgURL);
+         var text = $("<h1>").text(title);
+         var sourcelink = $("<a>").attr("href",sourceURL).text(sourceURL);
+         var rank = $("<p>").text("rank "+socialrank);
           recipeDiv.append(image);
+          recipeDiv.append(text);
+          recipeDiv.append(sourcelink);
+          recipeDiv.append(rank)
+          console.log(recipeDiv)
 
         
-          $("#recipes-view").prepend(recipeDiv);
+          $("#recipe-view").prepend(recipeDiv);
         });
 
       }
