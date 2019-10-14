@@ -18,14 +18,18 @@ body {
 a {
     color: #333;
     text-decoration: none;
+    float: right;
 }
 
 h1, h2, h3 {
     padding-bottom: 20px;
+    margin: 10px;
+    
 }
 
 p {
     margin: 10px 0;
+    
 }
 
 /* Utilities */
@@ -34,6 +38,8 @@ p {
     max-width: 1100px;
     overflow: auto;
     padding: 0;
+
+    
 }
 
 /* Navbar */
@@ -45,11 +51,16 @@ p {
 
 #navbar a {
     color: #fff;
+    margin: 10px;
+    
 }
 
 #navbar h1 {
     float: left;
     padding-top: 20px;
+    margin: 10px;
+    color: whitesmoke;
+
 }
 
 #navbar ul {
@@ -72,4 +83,33 @@ p {
     background: #444;
     color: #ff0000;
 } 
+
+#form {
+    float: right;
+}
+
+label, input, textarea {
+    display: block;
+    margin: 10px;
+          
+}
+
+button {
+    margin: 15px;
+    
+}
+
+.float-right {
+    width: 300px;
+    float: right;
+
+}
+
+
+
+
+
+
+
+
 
