@@ -45,11 +45,13 @@
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-            console.log(response)
+
+          var json = JSON.parse(response)
+            console.log(json)
           // Creating a div to hold the recipe
 
-          var count = response.recipes;
-          console.log(count)
+          var count = response.count;
+          console.log(response.count)
 
           var recipeDiv = $("<div class='recipe'>");
 
