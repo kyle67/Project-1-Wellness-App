@@ -42,19 +42,21 @@
             var articleDiv = $("<div class='article'>");
             var article = $("<p>").text;
             articleDiv.append();
-            var imgURL = construct.article[0].urlToImage;
-            console.log(imgURL)
-            var sourceURL = json.recipes[0].source_url;
-            var socialrank = json.recipes[0].social_rank;
-            var title = json.recipes[0].title;
-            var image = $("<img>").attr("src", imgURL);
-            var text = $("<h1>").text(title);
-            var sourcelink = $("<a>").attr("href", sourceURL).text(sourceURL);
-            var rank = $("<p>").text("rank " + socialrank);
-            articleDiv.append(image);
-            articleDiv.append(text);
-            articleDiv.append(sourcelink);
-            articleDiv.append(rank)
+
+            var title = response.title;
+            var description = response.description;
+            var content = response.content;
+            var urlToImage = response.urlToImage;
+
+            var title =  $("<h1>").text(title);               
+            var description = $("<p>").text(description);
+            var content = $("<p>").text(content);
+            var urlToImage = $("<img>").attr("src",urlToImage);
+        
+            articleDiv.append(title);
+            articleDiv.append(description);
+            articleDiv.append(content);
+            articleDiv.append(urlToImage)
             console.log(articleDiv)
             $("#article-view").prepend(articleDiv);
           });
