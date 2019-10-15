@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,44 +26,41 @@
           var queryURL = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=2b489dc1b6f143db8f1a58e03bead577";
           // Creating an AJAX call for the article button being clicked
           $.ajax({
-            url: queryURL,
-            method: "GET"
-          }).then(function (response) {
-            const articles = response.articles
-            console.log(response)
-            for(let i = 0; i < articles.length; i++) {
-              console.log("The " + i + " article is ", articles[i])
-              console.log("The  author is " + articles[i].author)
-              console.log("The title is " + articles[i].title)
-              console.log("The description is " + articles[i].description)
-            }
-        
-            // Creating a div to hold the recipe
-            var articleDiv = $("<div class='article'>");
-            var article = $("<p>").text;
-            articleDiv.append();
+           url: queryURL,
+           method: "GET"
+         }).then(function (response) {
+           const articles = response.articles
+           console.log(response)
+           for(let i = 0; i < articles.length; i++) {
+             console.log("The " + i + " article is ", articles[i])
+             console.log("The  author is " + articles[i].author)
+             console.log("The title is " + articles[i].title)
+             console.log("The description is " + articles[i].description)
+           
+             // Creating a div to hold the recipe
+             var articleDiv = $("<div class='article'>");
+             var article = $("<p>").text;
+             articleDiv.append();
+             var title = articles[i].title;
+             var description = articles[i].description;
+             var content = articles[i].content;
+             var urlToImage = articles[i].urlToImage;
+             var title =  $("<h1>").text(title);
+             var description = $("<p>").text(description);
+             var content = $("<p>").text(content);
+             var urlToImage = $("<img>").attr("src",urlToImage);
+             articleDiv.append(title);
+             articleDiv.append(description);
+             articleDiv.append(content);
+             articleDiv.append(urlToImage)
+             console.log(articleDiv)
+           $("#article-view").prepend(articleDiv);
+          }
+         });
+       }
+       displayArticleInfo()
+     })  
 
-            var title = response.title;
-            var description = response.description;
-            var content = response.content;
-            var urlToImage = response.urlToImage;
-
-            var title =  $("<h1>").text(title);               
-            var description = $("<p>").text(description);
-            var content = $("<p>").text(content);
-            var urlToImage = $("<img>").attr("src",urlToImage);
-        
-            articleDiv.append(title);
-            articleDiv.append(description);
-            articleDiv.append(content);
-            articleDiv.append(urlToImage)
-            console.log(articleDiv)
-            $("#article-view").prepend(articleDiv);
-          });
-        }
-        displayArticleInfo()
-
-      })
 
     </script>
   </div>
