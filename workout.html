@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Recipes</title>
+  <link rel="stylesheet" href="./assets/workout.css">
+  <style type="text/css">
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Recipe Search</h1>
+
+    <form id="recipe-form">
+      <label for="recipe-input">Enter Ingredients</label>
+      <input type="text" id="recipe-input">
+      <br>
+
+      <!-- Button triggers new movie to be added -->
+      <input id="add-recipe" type="submit" value="Click to Grab a Recipe">
+    </form>
+
+    <!-- Recipes will Get Dumped Here -->
+    <div id="recipe-view"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    
+      function displayRecipeInfo() {
+
+        var recipe = $(this).attr("data-name");
+        var queryURL = " https://www.googleapis.com/youtube/v3/videoCategories";
+
+        // Creating an AJAX call for the recipe button being clicked
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+
+          var json = JSON.parse(response)
+            console.log(json)
+          // Creating a div to hold the recipe
+
+        
+
+          var recipeDiv = $("<div class='recipe'>");
+
+        
+          var recipe = $("<p>").text;
+
+      
+          recipeDiv.append();
+
+        
+         var imgURL = json.recipes[0].image_url;
+            console.log(imgURL)
+        
+
+        
+          
+            
+                          
+         
+        
+         var sourceURL=json.recipes[0].source_url;
+
+         var socialrank =json.recipes[0].social_rank;
+
+         var title =json.recipes[0].title;
+          
+
+    
+         var image = $("<img>").attr("src", imgURL);
+         var text = $("<h1>").text(title);
+         var sourcelink = $("<a>").attr("href",sourceURL).text(sourceURL);
+         var rank = $("<p>").text("rank "+socialrank);
+          recipeDiv.append(image);
+          recipeDiv.append(text);
+          recipeDiv.append(sourcelink);
+          recipeDiv.append(rank)
+          console.log(recipeDiv)
+
+        
+          $("#recipe-view").prepend(recipeDiv);
+        });
+
+      }
+      $("#add-recipe").on("click", function(event) {
+        event.preventDefault();
+        displayRecipeInfo();
+        // This line grabs the input from the textbox
+        var recipe = $("#recipe-input").val().trim();
+      })
+    
+    </script>
+  </div>
+</body>
+
+</html>
