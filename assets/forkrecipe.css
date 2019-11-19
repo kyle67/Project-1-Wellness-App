@@ -1,0 +1,9 @@
+
+/* Main Style */
+
+body {
+    background: url(./images/nutrition.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: cover;
+}
