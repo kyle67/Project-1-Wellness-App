@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Health</title>
+  <style type="text/css">
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Healthy News</h1>
+    <div id="article-view"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        function displayArticleInfo() {
+          console.log("Retreiving health articles")
+          var queryURL = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=2b489dc1b6f143db8f1a58e03bead577";
+          // Creating an AJAX call for the article button being clicked
+          $.ajax({
+           url: queryURL,
+           method: "GET"
+         }).then(function (response) {
+           const articles = response.articles
+           console.log(response)
+           for(let i = 0; i < articles.length; i++) {
+             console.log("The " + i + " article is ", articles[i])
+             console.log("The  author is " + articles[i].author)
+             console.log("The title is " + articles[i].title)
+             console.log("The description is " + articles[i].description)
+           
+             // Creating a div to hold the recipe
+             var articleDiv = $("<div class='article'>");
+             var article = $("<p>").text;
+             articleDiv.append();
+             var title = articles[i].title;
+             var description = articles[i].description;
+             var content = articles[i].content;
+             var urlToImage = articles[i].urlToImage;
+             var title =  $("<h1>").text(title);
+             var description = $("<p>").text(description);
+             var content = $("<p>").text(content);
+             var urlToImage = $("<img>").attr("src",urlToImage);
+             articleDiv.append(title);
+             articleDiv.append(description);
+             articleDiv.append(content);
+             articleDiv.append(urlToImage)
+             console.log(articleDiv)
+           $("#article-view").prepend(articleDiv);
+          }
+         });
+       }
+       displayArticleInfo()
+     })  
+
+
+    </script>
+  </div>
+</body>
+
+</html>

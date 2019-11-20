@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url(./images/Men_Black_background_Barbell_Beard_516649_3840x2160.jpg);
+    background: url('./images/Men_Black_background_Barbell_Beard_516649_3840x2160.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-image: cover;
