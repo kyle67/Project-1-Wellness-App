@@ -1,0 +1,14 @@
+/* Main Style */
+
+body {
+    background: url(./images/recipes_spices.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: cover;
+}
+
+h1 {
+    color: black;
+    padding-bottom: 20px;
+    margin: 10px; 
+}

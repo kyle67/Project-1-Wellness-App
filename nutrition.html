@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nutrition</title>
+    <link rel="stylesheet" href="./assets/forkrecipe.css">
+    <style type="text/css">
+        button,
+        div,
+        form,
+        input {
+          margin: 10px;
+    }
+       
+        </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Recipe-Meal Plan</h1>
+
+        <!-- Rendered Buttons will get Dumped Here  -->
+        <div id="buttons-view"></div>
+
+        <form id="recipe-form">
+            <label for="recipe-input">Add Your Favorite Food</label>
+            <input type="text" id="movie-input">
+            <br>
+
+            <!-- Button triggers new meal plan to be added -->
+            <input id="add-recipe" type="submit" value="Get What You Want">
+        </form>
+
+        <!-- Movies will Get Dumped Here -->
+        <div id="recipe-view"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            function fetchRecipes() {
+                fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C%20gluten&number=10&offset=0&type=main%20course&query=burger", {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+                        "x-rapidapi-key": "2e4ad3828amshb40ea2bf43cf9cbp1801d4jsn8799057cfff6"
+                    }
+                })
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
+            }
+            fetchRecipes();
+        </script>
+</body>
+
+</html>
