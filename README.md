@@ -22,10 +22,12 @@
 - [Functionality](#Functionality)
     - [Contact List](#typo3-extension-repository)
     
-      - The user will register and login to the website with a email and password.The Passport package will allow users to log in with username and password, or other third party verifications such as Google. The password hashing middleware which we use to compliment Passport’s functionality is the Bcrypt package. This tool allows us to save the user in the database to later compare with the password used when generating their authentication token. Bcrypt adds 'salt' onto this concept by adding extra random characters onto the password that gets hashed. So the resulting hash is always different for the same input password. This prevents people from building a dictionary of hashes that corespond to the password that made them.
+      - The user will submit thier name into a contact list. The only function of this list is to calculate the number of visitors to the site. 
       
     - [Workout](#typo3-extension-repository)
       - The workout section of this site was created by embedding a Youtube video into a html file. 
+      
+      ![image](https://user-images.githubusercontent.com/40472408/71402258-64b72f80-25fa-11ea-98a9-2836ff09a99f.png)
       
       
       
