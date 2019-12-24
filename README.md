@@ -35,10 +35,7 @@
     
     ![image](https://user-images.githubusercontent.com/40472408/71402472-f757ce80-25fa-11ea-9535-d9068f4484fa.png)
     
-
-      
-    
-    
+    ![image](https://user-images.githubusercontent.com/40472408/71402953-3df9f880-25fc-11ea-95e0-1ce82337987b.png) 
     
 - [Packages](#Packages)
     - [Node.js](#typo3-extension-repository)
