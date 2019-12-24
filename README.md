@@ -1,5 +1,6 @@
 # Wellness App
 
+![image](https://user-images.githubusercontent.com/40472408/71401242-3dab2e80-25f7-11ea-8c97-8c6eea400884.png)
 
 
 
