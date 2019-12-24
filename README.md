@@ -15,7 +15,7 @@
 
 [The Wellness App](https://kyle67.github.io/Project-1-Wellness-App/). will provide the user with information on nutrion, health and exercise. The user can click on the workout button and view a workout of the week along with a bio of the featured celebrity trainer. Under the health section the user is provided with articles on the latest news in health and nutrition. Another feature, the BMI calculator button directs the user to a site with information on BMI and a calculator that allows the user to determine their BMI. Last the user can click on the nutrition button enter their ingredient of choice and be directed to online recipes. 
 
-![image](https://user-images.githubusercontent.com/40472408/70688760-7d315c80-1c80-11ea-819f-c37ac597ac52.png) 
+![image](https://user-images.githubusercontent.com/40472408/71401981-85cb5080-25f9-11ea-9c7a-3afa616c6805.png)
 
 ## Table of Contents
 
