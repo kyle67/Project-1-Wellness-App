@@ -31,7 +31,7 @@
       
       
     - [Health](#typo3-extension-repository)
-    - The health secton of this app give users articles on health and nutriton. These articles are being call to the client from the news api. 
+    - The health secton of this app provides users with articles on health and nutriton. These articles are being call to the client from the news api. 
       
     
     
