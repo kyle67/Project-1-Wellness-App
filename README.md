@@ -34,6 +34,7 @@
     - The health secton of this app provides users with articles on health and nutriton. These articles are being call to the client from the news api. 
     
     ![image](https://user-images.githubusercontent.com/40472408/71402472-f757ce80-25fa-11ea-9535-d9068f4484fa.png)
+    
 
       
     
