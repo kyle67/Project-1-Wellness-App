@@ -30,9 +30,8 @@
       ![image](https://user-images.githubusercontent.com/40472408/71402258-64b72f80-25fa-11ea-98a9-2836ff09a99f.png)
       
       
-      
-    - [Quotes](#typo3-extension-repository)
-    - An additional functionality will be added to this app that will allow the dealers to generate a quote based on the data that was populated in the application. The quote data will be generated from the data populated in the application. 
+    - [Health](#typo3-extension-repository)
+    - The health secton of this app give users articles on health and nutriton. These articles are being call to the client from the news api. 
       
     
     
